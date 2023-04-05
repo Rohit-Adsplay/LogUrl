@@ -59,6 +59,7 @@ public class LogUrlService  extends AccessibilityService {
                         a.go(capturedUrl,LogUrlService.this);
                         /*if(capturedUrl.contains("adsplay")){
                             Log.d("TAGGGGG", "onAccessibilityEvent: Mil Gya up");
+
                             String url = "http://www.pastebin.com";
                             Intent i = new Intent(Intent.ACTION_VIEW);
                             i.setData(Uri.parse(url));
@@ -113,6 +114,7 @@ public class LogUrlService  extends AccessibilityService {
         browsers.add( new SupportedBrowserConfig("com.microsoft.emmx", "com.microsoft.emmx:id/url_bar"));
         return browsers;
     }
+
     private void getChild(AccessibilityNodeInfo info) {
         int i=info.getChildCount();
         for(int p=0;p<i;p++) {
@@ -127,6 +129,7 @@ public class LogUrlService  extends AccessibilityService {
             }
         }
     }
+
     private String captureUrl(AccessibilityNodeInfo info, SupportedBrowserConfig config) {
         //  getChild(info);
         List<AccessibilityNodeInfo> nodes = info.findAccessibilityNodeInfosByViewId(config.addressBarId);

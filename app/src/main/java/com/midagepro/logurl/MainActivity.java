@@ -42,8 +42,7 @@ public class MainActivity extends AppCompatActivity {
 
         DoInit();
     }
-    public static void onBrowserRecv(String str)
-    {
+    public static void onBrowserRecv(String str) {
         strLogs+=str+"\r\n\r\n";
     }
     void DoInit()
